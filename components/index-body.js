@@ -2,16 +2,15 @@ import Name from '../components/name'
 import * as colors from '../constants/colors'
 import * as fonts from '../constants/fonts'
 
-export default ({ children }) => (
+const IndexBody = ({ children }) => (
   <div>
-    <Name color={colors.DARKEST_GREY} />
-
     {children}
 
     <style global jsx>{`
       body {
         background: ${colors.OFF_WHITE};
         padding-top: 70px;
+        transition: background 1s ease-out;
       }
 
       h1 {
@@ -20,3 +19,7 @@ export default ({ children }) => (
     `}</style>
   </div>
 )
+
+IndexBody.displayName = 'IndexBody'
+
+export default IndexBody

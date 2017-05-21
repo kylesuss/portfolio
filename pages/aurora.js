@@ -1,12 +1,6 @@
-import Head from '../components/head'
-import ProjectBody from '../components/project-body'
+import pageWithTransition from '../factories/page-with-transition'
+import pageContent from '../page-contents/aurora'
 
-export default () => (
-  <div>
-    <Head title="Aurora by Kyle Suss" />
-
-    <ProjectBody>
-      <div>Aurora</div>
-    </ProjectBody>
-  </div>
-)
+export default pageWithTransition({
+  startingPageContent: pageContent()
+})

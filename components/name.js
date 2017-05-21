@@ -1,4 +1,4 @@
-export default ({ color }) => (
+const Name = ({ color }) => (
   <div>
     <h1 style={{ color }}>
       Kyle Suss
@@ -19,7 +19,12 @@ export default ({ color }) => (
       h1 {
         margin: 0;
         font-size: 1.75rem;
+        transition: color 1s ease-out;
       }
     `}</style>
   </div>
 )
+
+Name.displayName = 'Name'
+
+export default Name
