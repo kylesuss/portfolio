@@ -1,6 +1,6 @@
 import pageWithTransition from '../factories/page-with-transition'
-import pageContent from '../page-contents/index'
+import IndexPageContent from '../page-contents/index'
 
 export default pageWithTransition({
-  startingPageContent: pageContent()
+  startingPageContent: <IndexPageContent />
 })
