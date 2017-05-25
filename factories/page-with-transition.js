@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
 import Head from '../components/head'
-import Name from '../components/name'
+import Navigation from '../components/navigation'
 import RouteTransition from '../components/route-transition'
 import dynamicComponents, { DEFAULT_COMPONENT } from '../constants/page-contents'
 import * as colors from '../constants/colors'
+
+const indexPathname = '/'
 
 export default ({ startingPageContent }) => (
   class extends Component {
@@ -26,10 +28,13 @@ export default ({ startingPageContent }) => (
     }
 
     get nameColor() {
-      const { query } = this.props.url
-      return query && query.page
-        ? colors.OFF_WHITE
-        : colors.DARKEST_GREY
+      const { pathname, query } = this.props.url
+      const isIndexPath = pathname === indexPathname
+      const hasPageQuery = query && query.page
+
+      return isIndexPath && !hasPageQuery
+        ? colors.DARKEST_GREY
+        : colors.OFF_WHITE
     }
 
     render() {
@@ -39,7 +44,7 @@ export default ({ startingPageContent }) => (
         <div>
           <Head />
 
-          <Name color={this.nameColor} />
+          <Navigation color={this.nameColor} />
 
           <RouteTransition>
             {pageContent}

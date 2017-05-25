@@ -1,4 +1,4 @@
-const Name = ({ color }) => (
+const Navigation = ({ color }) => (
   <div>
     <h1 style={{ color }}>
       Kyle Suss
@@ -25,6 +25,6 @@ const Name = ({ color }) => (
   </div>
 )
 
-Name.displayName = 'Name'
+Navigation.displayName = 'Navigation'
 
-export default Name
+export default Navigation

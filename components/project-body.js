@@ -1,4 +1,3 @@
-import Name from '../components/name'
 import * as colors from '../constants/colors'
 import * as fonts from '../constants/fonts'
 
