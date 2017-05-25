@@ -1,1 +1,1 @@
-export const HEADING = "'Raleway', sans-serif";
+export const HEADING = "'Raleway', sans-serif"

@@ -18,7 +18,7 @@ export default ({ startingPageContent }) => (
     componentWillReceiveProps(nextProps) {
       const { query } = nextProps.url
       const { page } = this.props.url.query
-      const nextProjext = query.page;
+      const nextProjext = query.page
       const isChangingPageQuery = page !== query.page
 
       if (!isChangingPageQuery) { return }
