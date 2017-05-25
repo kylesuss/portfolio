@@ -4,8 +4,6 @@ import * as fonts from '../constants/fonts'
 
 const ProjectBody = ({ children }) => (
   <div>
-    <Name color={colors.OFF_WHITE} />
-
     {children}
 
     <style global jsx>{`
