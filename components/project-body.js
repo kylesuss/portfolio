@@ -7,9 +7,8 @@ const ProjectBody = ({ children }) => (
 
     <style global jsx>{`
       body {
-        background: ${colors.DARKEST_GREY};
+        background: ${colors.OFF_WHITE};
         padding-top: 70px;
-        transition: background 1s ease-out;
       }
 
       h1 {

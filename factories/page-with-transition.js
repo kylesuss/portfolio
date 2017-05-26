@@ -27,26 +27,17 @@ export default ({ startingPageContent }) => (
       this.setState({ pageContent: <NextComponent /> })
     }
 
-    get nameColor() {
-      const { pathname, query } = this.props.url
-      const isIndexPath = pathname === indexPathname
-      const hasPageQuery = query && query.page
-
-      return isIndexPath && !hasPageQuery
-        ? colors.DARKEST_GREY
-        : colors.OFF_WHITE
-    }
-
     render() {
+      const { url } = this.props
       const { pageContent } = this.state
 
       return (
         <div>
           <Head />
 
-          <Navigation color={this.nameColor} />
+          <Navigation color={colors.DARKEST_GREY} />
 
-          <RouteTransition>
+          <RouteTransition url={url}>
             {pageContent}
           </RouteTransition>
         </div>

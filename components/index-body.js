@@ -9,7 +9,6 @@ const IndexBody = ({ children }) => (
       body {
         background: ${colors.OFF_WHITE};
         padding-top: 70px;
-        transition: background 1s ease-out;
       }
 
       h1 {
