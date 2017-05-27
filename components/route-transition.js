@@ -123,13 +123,17 @@ export default class RouteTransition extends Component {
               transform-origin: right;
             }
 
-            50% {
+            45% {
               transform: scaleX(1);
               transform-origin: right;
             }
 
-            50.001% {
+            45.001% {
               transform-origin: left;
+            }
+
+            55% {
+              transform: scaleX(1);
             }
 
             100% {
@@ -144,13 +148,17 @@ export default class RouteTransition extends Component {
               transform-origin: left;
             }
 
-            50% {
+            45% {
               transform: scaleX(1);
               transform-origin: left;
             }
 
-            50.001% {
+            45.001% {
               transform-origin: right;
+            }
+
+            55% {
+              transform: scaleX(1);
             }
 
             100% {

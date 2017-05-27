@@ -5,6 +5,6 @@ export default () => (
   <Head>
     <meta name="viewport" content="initial-scale=1.0" width="device-width" />
     <link rel="stylesheet" href="/static/normalize.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400" />
   </Head>
 )

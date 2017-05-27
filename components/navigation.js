@@ -18,8 +18,9 @@ const Navigation = ({ color }) => (
 
       h1 {
         margin: 0;
-        font-size: 1.75rem;
-        transition: color 1s ease-out;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
       }
     `}</style>
   </div>
