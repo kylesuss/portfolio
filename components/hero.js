@@ -9,7 +9,7 @@ const Hero = () => (
     <style jsx>{`
       div {
         display: flex;
-        height: calc(100vh - ${layout.BODY_SPACING} - ${layout.BODY_SPACING});
+        height: calc(100vh - ${layout.DOUBLE_BODY_SPACING});
       }
 
       .left {
