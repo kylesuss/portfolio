@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as colors from '../constants/colors'
 import * as easings from '../constants/easings'
+import * as layout from '../constants/layout'
 
 const ANIMATION_LENGTH = 1000
 
@@ -81,7 +82,7 @@ export default class RouteTransition extends Component {
   })
 
   render() {
-    const { activeChildren } = this.state
+    const { activeChildren, isMovingForward } = this.state
 
     return (
       <div>
@@ -92,15 +93,15 @@ export default class RouteTransition extends Component {
         <style global jsx>{`
           .animation {
             position: fixed;
-            top: 0;
-            height: 100vh;
-            width: 100vw;
+            top: ${layout.BODY_SPACING};
+            height: calc(100vh - ${layout.DOUBLE_BODY_SPACING});
+            width: calc(100vw - ${layout.DOUBLE_BODY_SPACING});
             background: ${colors.DARKEST_GREY};
             transform: scaleY(0) scaleX(0);
           }
 
           .animation--forward {
-            right: 0;
+            right: ${layout.BODY_SPACING};
             transform: scaleY(1) scaleX(0);
           }
 
@@ -109,7 +110,7 @@ export default class RouteTransition extends Component {
           }
 
           .animation--backward {
-            left: 0;
+            left: ${layout.BODY_SPACING};
             transform: scaleY(1) scaleX(0);
           }
 

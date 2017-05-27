@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
 import Head from '../components/head'
-import Navigation from '../components/navigation'
+import TopNavigation from '../components/top-navigation'
+import BottomNavigation from '../components/bottom-navigation'
 import RouteTransition from '../components/route-transition'
 import dynamicComponents, { DEFAULT_COMPONENT } from '../constants/page-contents'
 import * as colors from '../constants/colors'
@@ -35,11 +36,13 @@ export default ({ startingPageContent }) => (
         <div>
           <Head />
 
-          <Navigation color={colors.DARKEST_GREY} />
+          <TopNavigation color={colors.DARKEST_GREY} />
 
           <RouteTransition url={url}>
             {pageContent}
           </RouteTransition>
+
+          <BottomNavigation />
         </div>
       )
     }

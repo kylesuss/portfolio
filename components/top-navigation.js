@@ -1,4 +1,7 @@
-const Navigation = ({ color }) => (
+import * as colors from '../constants/colors'
+import * as layout from '../constants/layout'
+
+const TopNavigation = ({ color }) => (
   <div>
     <h1 style={{ color }}>
       Kyle Suss
@@ -11,21 +14,22 @@ const Navigation = ({ color }) => (
         top: 0;
         right: 0;
         left: 0;
-        height: 70px;
+        height: ${layout.BODY_SPACING};
         align-items: center;
-        justify-content: center;
+        background: ${colors.WHITE};
+        padding: 0 ${layout.BODY_SPACING};
       }
 
       h1 {
         margin: 0;
         text-transform: uppercase;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         letter-spacing: 2px;
       }
     `}</style>
   </div>
 )
 
-Navigation.displayName = 'Navigation'
+TopNavigation.displayName = 'TopNavigation'
 
-export default Navigation
+export default TopNavigation

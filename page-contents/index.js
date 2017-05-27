@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import IndexBody from '../components/index-body'
+import Hero from '../components/hero'
 import ProjectList from '../components/project-list'
 
 const IndexPageContent = () => (
@@ -9,6 +10,7 @@ const IndexPageContent = () => (
     </Head>
 
     <IndexBody>
+      <Hero />
       <ProjectList />
     </IndexBody>
   </div>
