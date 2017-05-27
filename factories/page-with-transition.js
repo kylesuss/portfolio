@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import dynamic from 'next/dynamic'
 import Head from '../components/head'
 import TopNavigation from '../components/top-navigation'
+import RightNavigation from '../components/right-navigation'
 import BottomNavigation from '../components/bottom-navigation'
 import RouteTransition from '../components/route-transition'
 import dynamicComponents, { DEFAULT_COMPONENT } from '../constants/page-contents'
@@ -41,6 +42,8 @@ export default ({ startingPageContent }) => (
           <RouteTransition url={url}>
             {pageContent}
           </RouteTransition>
+
+          <RightNavigation />
 
           <BottomNavigation />
         </div>
