@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import * as colors from '../constants/colors'
 import * as layout from '../constants/layout'
+import * as zIndex from '../constants/z-index'
 
 const TopNavigation = ({ color }) => (
   <div>
@@ -21,6 +22,7 @@ const TopNavigation = ({ color }) => (
         align-items: center;
         background: ${colors.WHITE};
         padding: 0 ${layout.BODY_SPACING};
+        z-index: ${zIndex.NAVIGATION};
       }
 
       h1 {

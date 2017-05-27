@@ -106,7 +106,7 @@ export default class RouteTransition extends Component {
           }
 
           .animation--forward.animation--active {
-            animation: scaleXForward ${ANIMATION_LENGTH}ms ${easings.EASE_IN_OUT_QUINT};
+            animation: scaleRouteXForward ${ANIMATION_LENGTH}ms ${easings.EASE_IN_OUT_QUINT};
           }
 
           .animation--backward {
@@ -115,10 +115,10 @@ export default class RouteTransition extends Component {
           }
 
           .animation--backward.animation--active {
-            animation: scaleXBackward ${ANIMATION_LENGTH}ms ${easings.EASE_IN_OUT_QUINT};
+            animation: scaleRouteXBackward ${ANIMATION_LENGTH}ms ${easings.EASE_IN_OUT_QUINT};
           }
 
-          @keyframes scaleXForward {
+          @keyframes scaleRouteXForward {
             0% {
               transform: scaleX(0);
               transform-origin: right;
@@ -143,7 +143,7 @@ export default class RouteTransition extends Component {
             }
           }
 
-          @keyframes scaleXBackward {
+          @keyframes scaleRouteXBackward {
             0% {
               transform: scaleX(0);
               transform-origin: left;

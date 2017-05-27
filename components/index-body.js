@@ -14,8 +14,9 @@ const IndexBody = ({ children }) => (
         padding-bottom: ${layout.BODY_SPACING};
       }
 
-      h1 {
-        font-family: ${fonts.HEADING}
+      h1, h2 {
+        font-family: ${fonts.HEADING};
+        margin: 0;
       }
     `}</style>
   </Body>

@@ -6,7 +6,7 @@ import * as easings from '../constants/easings'
 
 const LINKED_IN_LINK = 'https://www.linkedin.com/in/kylesuss/'
 const GITHUB_LINK = 'https://github.com/kylesuss'
-const ICON_SIZE = 24
+const ICON_SIZE = 22
 
 const RightNavigation = ({ color }) => (
   <div>
@@ -47,7 +47,7 @@ const RightNavigation = ({ color }) => (
       }
 
       .linked-in {
-        margin-bottom: .5rem;
+        margin-bottom: .75rem;
       }
     `}</style>
   </div>
