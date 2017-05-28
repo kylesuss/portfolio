@@ -3,14 +3,14 @@ import IndexBody from '../components/index-body'
 import Hero from '../components/hero'
 import ProjectList from '../components/project-list'
 
-const IndexPageContent = () => (
+const IndexPageContent = ({ isFirstMount = true }) => (
   <div>
     <Head>
       <title>Kyle Suss</title>
     </Head>
 
     <IndexBody>
-      <Hero />
+      <Hero isFirstMount={isFirstMount} />
       <ProjectList />
     </IndexBody>
   </div>

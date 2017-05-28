@@ -2,11 +2,19 @@ import * as colors from '../constants/colors'
 import * as layout from '../constants/layout'
 import * as easings from '../constants/easings'
 import * as zIndex from '../constants/z-index'
+import classnames from 'classnames'
 
 const ANIMATION_LENGTH = 1000
 
-const Hero = () => (
-  <div className="hero__wrap hero__item">
+const heroWrapClassName = ({ isFirstMount }) => {
+  return classnames({
+    'hero__wrap hero__item': true,
+    'hero__wrap--animated': isFirstMount
+  })
+}
+
+const Hero = ({ isFirstMount }) => (
+  <div className={heroWrapClassName({ isFirstMount })}>
     <div className="hero__name">
       <h2 className="hero__name__first">
         Kyle
@@ -45,6 +53,9 @@ const Hero = () => (
 
       .hero__name__first {
         right: calc(50% + 1rem);
+      }
+
+      .hero__wrap--animated .hero__name__first {
         animation: scaleFirstNameXForward ${ANIMATION_LENGTH * 1.75}ms ${easings.EASE_OUT_BACK};
       }
 
@@ -67,6 +78,9 @@ const Hero = () => (
 
       .hero__name__last {
         left: calc(50% + 1rem);
+      }
+
+      .hero__wrap--animated .hero__name__last {
         animation: scaleLastNameXForward ${ANIMATION_LENGTH * 1.85}ms ${easings.EASE_OUT_BACK};
       }
 
@@ -94,6 +108,9 @@ const Hero = () => (
         width: 50%;
         background: ${colors.BLUE};
         transform-origin: left;
+      }
+
+      .hero__wrap--animated .hero__back {
         animation: scaleHeroXForward ${ANIMATION_LENGTH * 1.5}ms ${easings.EASE_IN_OUT_QUINT};
       }
 
@@ -118,6 +135,9 @@ const Hero = () => (
         width: 100%;
         background: ${colors.LIGHT_GREY};
         transform-origin: bottom;
+      }
+
+      .hero__wrap--animated .hero__front {
         animation: scaleHeroYUpward ${ANIMATION_LENGTH}ms ${easings.EASE_IN_OUT_QUINT};
       }
 

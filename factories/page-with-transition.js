@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, createElement } from 'react'
 import dynamic from 'next/dynamic'
 import Head from '../components/head'
 import TopNavigation from '../components/top-navigation'
@@ -26,7 +26,12 @@ export default ({ startingPageContent }) => (
       if (!isChangingPageQuery) { return }
 
       const NextComponent = dynamicComponents[nextProjext || DEFAULT_COMPONENT]
-      this.setState({ pageContent: <NextComponent /> })
+
+      this.setState({
+        pageContent: createElement(NextComponent, {
+          isFirstMount: false
+        })
+      })
     }
 
     render() {

@@ -4,6 +4,7 @@ import classnames from 'classnames'
 import * as colors from '../constants/colors'
 import * as easings from '../constants/easings'
 import * as layout from '../constants/layout'
+import * as zIndex from '../constants/z-index'
 
 const ANIMATION_LENGTH = 1000
 
@@ -98,6 +99,7 @@ export default class RouteTransition extends Component {
             width: calc(100vw - ${layout.DOUBLE_BODY_SPACING});
             background: ${colors.DARKEST_GREY};
             transform: scaleY(0) scaleX(0);
+            z-index: ${zIndex.ROUTE_ANIMATION};
           }
 
           .animation--forward {
